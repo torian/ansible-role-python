@@ -26,7 +26,7 @@ python_src_url: "https://www.python.org/ftp/python/{{python_version}}/{{python_s
 python_src_pkg_dir: "{{python_src_prefix}}/Python-{{python_version}}"
 
 # Python setuptools
-python_setuptools_src_dir: /usr/local/src/
+python_setuptools_src_dir: /usr/local/src
 
 python_setuptools_pkg: ez_setup.py
 
