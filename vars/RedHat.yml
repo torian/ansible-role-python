@@ -12,8 +12,6 @@ python_default_packages:
   - libcurl
   - libcurl-devel
   - curl
-  - compat-readline5
-  - compat-readline5-devel
   - readline
   - readline-devel
   - bzip2-devel
