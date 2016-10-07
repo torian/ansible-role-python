@@ -10,14 +10,14 @@
   yum:
     state: present
     name: "{{item}}"
-  with_items: "{{python_default_packages_centos}}"
+  with_items: "{{python_default_packages_centos|default([])}}"
   when: ansible_distribution == "CentOS"
 
 - name: Install packages (Amazon Linux)
   yum:
     state: present
     name: "{{item}}"
-  with_items: "{{python_default_packages_amzn}}"
+  with_items: "{{python_default_packages_amzn|default([])}}"
   when: ansible_distribution == "Amazon"
 
 - name: Install additional dev packages

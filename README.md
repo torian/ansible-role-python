@@ -92,3 +92,24 @@ above mentioned variables:
   * `python_build_opts_default: '-j2 profile-opt'`
 
 
+## Distros with Python <= 2.7.9
+
+Since the source code is downloaded from official python site, which forces
+requests to `HTTPS`, if the distro's python version is lower than 2.7.9, support
+for SNI might be missing, and you might see an error like:
+```
+msg: Failed to validate the SSL certificate for www.python.org:443. Make sure 
+your managed systems have a valid CA certificate installed.  If the website 
+serving the url uses SNI you need python >= 2.7.9 on your managed machine.  
+You can use validate_certs=False if you do not need to confirm the server\s 
+identity but this is unsafe and not recommended Paths checked for this 
+platform: /etc/ssl/certs, /etc/pki/ca-trust/extracted/pem, /etc/pki/tls/certs,
+/usr/share/ca-certificates/cacert.org, /etc/ansible
+```
+
+In that case, you need to set the following role var:
+
+```
+python_download_validate_certs: no
+```
+
