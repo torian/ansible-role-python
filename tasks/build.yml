@@ -11,6 +11,7 @@
   get_url:
     url="{{python_src_url}}"
     dest="{{python_src_prefix}}"
+    validate_certs="{{python_download_validate_certs}}"
 #  when: python_src_stat.stat.md5|default('')
 
 - name: Extract code

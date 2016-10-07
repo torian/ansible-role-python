@@ -17,6 +17,12 @@ python_src_prefix: /usr/local/src
 #  The archive name to be downloaded
 python_src_pkg: "Python-{{python_version}}.tgz"
 
+# get_url SSL fix
+# for SNI you need python >= 2.7.9. If the python version that
+# comes with the OS is <= 2.7.9, then you need to set this to no
+# 
+python_download_validate_certs: yes
+
 # Python src url
 #  url for the python source archive
 python_src_url: "https://www.python.org/ftp/python/{{python_version}}/{{python_src_pkg}}"

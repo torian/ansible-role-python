@@ -16,6 +16,7 @@
   get_url:
     url="{{python_setuptools_url}}"
     dest="{{python_setuptools_src_dir}}"
+    validate_certs="{{python_download_validate_certs}}"
   when: not setuptools_src_stat.stat.exists
 
 - name: Check Custom Setuptools binary
