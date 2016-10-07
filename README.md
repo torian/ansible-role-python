@@ -113,3 +113,11 @@ In that case, you need to set the following role var:
 python_download_validate_certs: no
 ```
 
+## License
+
+See [License](LICENSE)
+
+## Author Information
+
+This role was created in 2016 by Emiliano Castagnari.
+
