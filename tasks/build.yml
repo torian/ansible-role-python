@@ -20,6 +20,17 @@
     src="{{python_src_prefix}}/{{python_src_pkg}}"
     dest="{{python_src_prefix}}"
 
+- name: Patch code
+  script: |
+    #!/bin/bash
+    set -e
+    cd "{{python_src_prefix}}"
+    wget -q -O "{{item.basename}}" "{{item.url}}"
+    echo "{{item.sha1sum}}" | sha1sum
+    patch {{item.pargs|default('-p1')}} -i "{{item.basename}}"
+    rm "{{item.basename}}"
+  with_items: "{{python_patches}}"
+
 - name: Check Custom Python binary
   command: >
    {{python_bin}} --version
