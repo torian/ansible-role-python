@@ -27,7 +27,8 @@
     wget -q -O "{{item.basename}}" "{{item.url}}"
     echo "{{item.sha1sum}}" | sha1sum
     patch {{item.pargs|default('-p1')}} -i "{{item.basename}}"
-  chdir: "{{python_src_prefix}}"
+  args:
+    chdir: "{{python_src_prefix}}"
   with_items: "{{python_patches}}"
 
 - name: Check Custom Python binary
