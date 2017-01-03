@@ -21,7 +21,7 @@
     dest="{{python_src_prefix}}"
 
 - name: Patch code
-  shell: |
+  shell: >
     #!/bin/bash
     set -e
     wget -q -O "{{item.basename}}" "{{item.url}}"
