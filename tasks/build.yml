@@ -21,14 +21,13 @@
     dest="{{python_src_prefix}}"
 
 - name: Patch code
-  script: |
+  shell: |
     #!/bin/bash
     set -e
-    cd "{{python_src_prefix}}"
     wget -q -O "{{item.basename}}" "{{item.url}}"
     echo "{{item.sha1sum}}" | sha1sum
     patch {{item.pargs|default('-p1')}} -i "{{item.basename}}"
-    rm "{{item.basename}}"
+  chdir: "{{python_src_prefix}}"
   with_items: "{{python_patches}}"
 
 - name: Check Custom Python binary
