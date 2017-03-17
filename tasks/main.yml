@@ -5,7 +5,7 @@
   tags: always
 
 - include: install.yml
-  sudo: true
+  become: true
   tags: python_install
 
 - include: build.yml
