@@ -1,24 +1,24 @@
 ---
 
 - name: Stat Python source
-  stat: 
-    path="{{python_src_prefix}}/{{python_src_pkg}}"
-    get_md5=True 
-    get_checksum=True 
+  stat:
+    path: "{{python_src_prefix}}/{{python_src_pkg}}"
+    get_md5: True
+    get_checksum: True
   register: python_src_stat
 
 - name: Get Python source
   get_url:
-    url="{{python_src_url}}"
-    dest="{{python_src_prefix}}"
-    validate_certs="{{python_download_validate_certs}}"
+    url: "{{python_src_url}}"
+    dest: "{{python_src_prefix}}"
+    validate_certs: "{{python_download_validate_certs}}"
 #  when: python_src_stat.stat.md5|default('')
 
 - name: Extract code
   unarchive:
-    copy=no
-    src="{{python_src_prefix}}/{{python_src_pkg}}"
-    dest="{{python_src_prefix}}"
+    copy: no
+    src: "{{python_src_prefix}}/{{python_src_pkg}}"
+    dest: "{{python_src_prefix}}"
 
 - name: Check Custom Python binary
   command: >
@@ -39,7 +39,7 @@
     make altinstall
   args:
     chdir: "{{python_src_pkg_dir}}"
-  sudo: true
+  become: true
   when: (python_installed | failed) or (python_force_build)
 
 # vi:ts=2:sw=2:et:ft=yaml
