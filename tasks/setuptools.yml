@@ -24,6 +24,7 @@
    {{python_setuptools_bin}} --version
   ignore_errors: true
   register: setuptools_installed
+  tags: skip_ansible_lint
 
 - name: Build Custom Setuptools
   command: >
