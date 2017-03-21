@@ -1,5 +1,9 @@
 # Changelog
 
+## 2017-03-21: 1.0.2
+
+  - Ansible lint - skip linting on some check commands
+
 ## 2017-03-17: 1.0.1
 
   - Ansible lint - Fixed trailing whitespace
