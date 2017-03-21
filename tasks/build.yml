@@ -25,6 +25,8 @@
    {{python_bin}} --version
   ignore_errors: true
   register: python_installed
+  tags: skip_ansible_lint
+
 
 - name: Build Custom Python
   shell: >
