@@ -1,5 +1,9 @@
 # Changelog
 
+## 2017-10-03: 1.0.3
+  
+  - Update openssl package version fo AMZ Linux
+
 ## 2017-03-21: 1.0.2
 
   - Ansible lint - skip linting on some check commands
