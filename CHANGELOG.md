@@ -1,5 +1,11 @@
 # Changelog
 
+## 2017-10-05: 1.1.0
+  
+  - Add the ability to configure python and pip binaries as
+    alternatives through the use of `python_alternative_enabled`
+    and `python_pip_alternative_enabled` (default to false)
+
 ## 2017-10-03: 1.0.3
   
   - Update openssl package version fo AMZ Linux
