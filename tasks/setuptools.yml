@@ -33,13 +33,4 @@
     chdir: "{{python_setuptools_src_dir}}"
   when: (setuptools_installed | failed) or (setuptools_force_build)
 
-# FIXME idempotency
-- name: Install pip
-  easy_install:
-    name: pip
-    executable: "{{python_setuptools_bin}}"
-#  command: >
-#    {{python_setuptools_bin}} pip
-
-
 # vi:ts=2:sw=2:et:ft=yaml

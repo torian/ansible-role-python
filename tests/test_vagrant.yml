@@ -7,7 +7,9 @@
         role: ansible-role-python,
         python_version: 2.7.11,
         python_bin: /usr/local/bin/python2.7,
-        python_setuptools_bin: /usr/local/bin/easy_install-2.7
+        python_setuptools_bin: /usr/local/bin/easy_install-2.7,
+        python_alternative_enabled: true,
+        python_pip_alternative_enabled: true
       }
 
     - {

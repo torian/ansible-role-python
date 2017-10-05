@@ -1,0 +1,17 @@
+---
+
+- name: Python Alternative
+  alternatives:
+    name: python
+    link: "{{python_alternative_link}}"
+    path: "{{python_alternative_path}}"
+  when: python_alternative_enabled
+
+- name: PIP Alternative
+  alternatives:
+    name: pip
+    link: "{{python_pip_alternative_link}}"
+    path: "{{python_pip_alternative_path}}"
+  when: python_pip_alternative_enabled
+
+# vim:ts=2:sw=2:et:ft=yaml

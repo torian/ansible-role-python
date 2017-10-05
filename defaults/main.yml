@@ -63,4 +63,15 @@ python_build_opts: ''
 python_force_build: False
 setuptools_force_build: False
 
+# Alternatives
+
+python_alternative_enabled: false
+python_alternative_link: /etc/alternatives/python
+python_alternative_path: "{{python_bin|default('/usr/local/bin/python')}}"
+
+
+python_pip_alternative_enabled: false
+python_pip_alternative_link: /etc/alternatives/pip
+python_pip_alternative_path: "{{python_pip_bin|default('/usr/local/bin/pip')}}"
+
 # vi:ts=2:sw=2:et:ft=yaml
