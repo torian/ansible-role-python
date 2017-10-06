@@ -1,5 +1,9 @@
 # Changelog
 
+## 2017-10-06: 1.1.1
+
+  - Python and PIP alternative priority (defaults to 50)
+
 ## 2017-10-05: 1.1.0
   
   - Add the ability to configure python and pip binaries as
