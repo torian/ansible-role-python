@@ -20,7 +20,7 @@ python_src_pkg: "Python-{{python_version}}.tgz"
 # get_url SSL fix
 # for SNI you need python >= 2.7.9. If the python version that
 # comes with the OS is <= 2.7.9, then you need to set this to no
-# 
+#
 python_download_validate_certs: yes
 
 # Python src url
@@ -52,8 +52,8 @@ python_dev_packages: []
 
 # Python configuration options
 #  There are two vars that control the configuration options, a default one
-#  and one you can 
-python_config_opts_default: '--with-ensurepip=install --enable-unicode=ucs4'
+#  and one you can
+python_config_opts_default: '--enable-unicode=ucs4'
 python_config_opts: ''
 
 python_build_opts_default: '-j2 profile-opt'
