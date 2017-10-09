@@ -33,4 +33,9 @@
     chdir: "{{python_setuptools_src_dir}}"
   when: (setuptools_installed | failed) or (setuptools_force_build)
 
+- name: Install pip
+  easy_install:
+    name: pip
+    executable: "{{python_setuptools_bin}}"
+
 # vi:ts=2:sw=2:et:ft=yaml
