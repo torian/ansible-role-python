@@ -1,8 +1,10 @@
 # Changelog
 
-## 2017-10-06: 1.1.1
+## 2017-10-09: 1.2.0
 
   - Python and PIP alternative priority (defaults to 50)
+  - Removed build option `ensurepip` that installs pip with faulty entrypoints
+  - Added back pip installation through setuptools
 
 ## 2017-10-05: 1.1.0
   
