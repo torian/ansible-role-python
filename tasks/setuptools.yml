@@ -34,8 +34,6 @@
   when: (setuptools_installed | failed) or (setuptools_force_build)
 
 - name: Install pip
-  easy_install:
-    name: pip
-    executable: "{{python_setuptools_bin}}"
+  command: "{{python_bin}} -m ensurepip"
 
 # vi:ts=2:sw=2:et:ft=yaml
